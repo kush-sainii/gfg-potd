@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution 
 {
     int[][] grid;
@@ -36,7 +38,7 @@ class Solution
         int m=grid[0].length;
         
         dp=new int[n][m][m];
-        for(int[][] mat:dp)for(int[] row:mat)Arrays.fill(row,-1);
+        for(int[][] mat:dp)for(int[] row:mat) Arrays.fill(row,-1);
         
         return solve(0,0,m-1);
     }
